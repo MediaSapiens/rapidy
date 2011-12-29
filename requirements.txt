@@ -1,0 +1,4 @@
+flask
+pil
+numpy
+pypng
