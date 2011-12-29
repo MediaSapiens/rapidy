@@ -1,0 +1,8 @@
+#example {
+    box-shadow:0px 0px 15px #407fab;
+    border-radius:10px;
+    display:box;
+    box-pack:center;
+    box-align:center;
+    border: 1px solid red;
+}

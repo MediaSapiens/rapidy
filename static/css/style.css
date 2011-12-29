@@ -65,9 +65,11 @@ td { vertical-align: top; }
 /* ==|== primary styles =====================================================
    Author: mediasapiens
    ========================================================================== */
-@import url('grid.css');
-@import url('site.css');
-
+/*
+see: index.html -> Modernizr.load({...})
+@import url('static/css/grid.css');
+@import url('static/css/site.css');
+*/
 
 
 
