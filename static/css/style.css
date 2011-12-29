@@ -70,8 +70,33 @@ see: index.html -> Modernizr.load({...})
 @import url('static/css/grid.css');
 @import url('static/css/site.css');
 */
-
-
+/* flexbox */
+.fboxh,.fboxv{width: 100%}
+.fboxh {
+     display: -moz-box;
+     display: -webkit-box;
+     display: -ms-box;
+     display: -o-box;
+     display: box;
+     -moz-box-orient: horizontal;
+     -webkit-box-orient: horizontal;
+     -ms-box-orient: horizontal;
+     -o-box-orient: horizontal;
+     box-orient: horizontal;
+ }
+.fboxv {
+    display: -moz-box;
+    display: -webkit-box;
+    display: -ms-box;
+    display: -o-box;
+    display: box;
+    -moz-box-orient: vertical;
+    -webkit-box-orient: vertical;
+    -ms-box-orient: vertical;
+    -o-box-orient: vertical;
+    box-orient: vertical;
+}
+/* /flexbox */
 
 
 /* ==|== non-semantic helper classes ======================================== */
