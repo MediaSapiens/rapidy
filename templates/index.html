@@ -19,14 +19,18 @@
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
 
     <!-- CSS concatenated and minified via ant build script-->
-    <link rel="stylesheet" href="static/css/style.css"/>
+    <link rel="stylesheet" href="static/css/style.css" class="cssfx"/>
     <!-- end CSS-->
+
+    <!-- cssfx -->
+    <script src="static/js/libs/cssfx.min.js"></script>
+    <!-- /cssfx -->
 
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <script src="static/js/libs/modernizr-2.0.6.min.js"></script>
+    <script src="static/js/libs/yepnope.1.0.2-min.js"></script>
 </head>
 
 <body>
@@ -57,22 +61,29 @@
         ['_trackPageview'],
         ['_trackPageLoadTime']
     ];
-    Modernizr.load([
+    yepnope([
         {
             //load css
-            load:'static/css/site.css'
+            load: 'static/css/site.css'
         },
+            /*
+        {
+            load: 'static/js/libs/cssfx.min.js'
+        },
+            */
         {
             load:'//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js',
             complete:function () {
                 if (!window.jQuery) {
-                    Modernizr.load('js/libs/jquery-1.6.1.min.js');
+                    yepnope('static/js/libs/jquery-1.6.1.min.js');
                 }
             }
         },
+            /*
         {
             load:'static/js/libs/jquery.css3finalize.min.js'
         },
+            */
         {
             load:'static/js/plugins.js'
         },
@@ -85,7 +96,6 @@
     ]);
 </script>
 <!-- end scripts-->
-
 
 <!--[if lt IE 7 ]>
 <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>

@@ -6,14 +6,3 @@
     box-align:center;
     border: 1px solid red;
 }
-.fboxh >div{border: 1px #1e90ff dotted}
-
-#box1 {
-    width: 350px;
-}
-#box2 {
-    box-flex: 1;
-}
-#box3 {
-    box-flex: 1;
-}

@@ -65,39 +65,20 @@ td { vertical-align: top; }
 /* ==|== primary styles =====================================================
    Author: mediasapiens
    ========================================================================== */
-/*
-see: index.html -> Modernizr.load({...})
-@import url('static/css/grid.css');
-@import url('static/css/site.css');
-*/
+
 /* flexbox */
-.fboxh,.fboxv{width: 100%}
+.fboxh,.fboxv{width: 100%;display: box;}
 .fboxh {
-     display: -moz-box;
-     display: -webkit-box;
-     display: -ms-box;
-     display: -o-box;
-     display: box;
-     -moz-box-orient: horizontal;
-     -webkit-box-orient: horizontal;
-     -ms-box-orient: horizontal;
-     -o-box-orient: horizontal;
-     box-orient: horizontal;
- }
+    box-orient: horizontal;
+}
 .fboxv {
-    display: -moz-box;
-    display: -webkit-box;
-    display: -ms-box;
-    display: -o-box;
-    display: box;
-    -moz-box-orient: vertical;
-    -webkit-box-orient: vertical;
-    -ms-box-orient: vertical;
-    -o-box-orient: vertical;
     box-orient: vertical;
 }
-/* /flexbox */
-
+.fboxh >div{border: 1px #1e90ff dotted}
+.grid{box-flex:1}
+.grid2{box-flex:2}
+.grid3{box-flex:3}
+.grid4{box-flex:4}
 
 /* ==|== non-semantic helper classes ======================================== */
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
