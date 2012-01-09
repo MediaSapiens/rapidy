@@ -4,8 +4,7 @@ from time import gmtime, strftime
 from flask import Flask, render_template, abort, send_from_directory,make_response,send_file
 from jinja2 import TemplateNotFound
 
-
-from lib.placeholder import Placeholder, PlaceholderOptionError
+from lib.placeholder import Placeholder
 
 def mkdir_p(path):
     try:
@@ -16,6 +15,9 @@ def mkdir_p(path):
         else: raise
 
 app = Flask(__name__)
+from flaskext.lesscss import lesscss
+lesscss(app)
+
 app.run
 
 @app.route('/', defaults={'page': 'index'})
@@ -50,7 +52,7 @@ placeholder
 image handling
 exmaples:
 host:port/200x100/898989/333333/placeholder.png
-host:port/200x100/placeholder.png
+post:port/200x100/placeholder.png
 host:port/placeholder.png
 '''
 
