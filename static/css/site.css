@@ -6,3 +6,20 @@
     box-align:center;
     border: 1px solid red;
 }
+/* flexbox */
+.fboxh,.fboxv{width: 100%;display: box;}
+.fboxh {
+    box-orient: horizontal;
+}
+.fboxv {
+    box-orient: vertical;
+}
+
+.grid{box-flex:1}
+.grid2{box-flex:2}
+.grid3{box-flex:3}
+.grid4{box-flex:4}
+
+
+
+.fboxh >div{border: 1px #1e90ff dotted}

@@ -22,14 +22,6 @@
     <link rel="stylesheet" href="static/css/style.css" class="cssfx"/>
     <!-- end CSS-->
 
-    <!-- cssfx -->
-    <script src="static/js/libs/cssfx.min.js"></script>
-    <!-- /cssfx -->
-
-    <!--[if IE]>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
     <script src="static/js/libs/yepnope.1.0.2-min.js"></script>
 </head>
 
@@ -63,14 +55,19 @@
     ];
     yepnope([
         {
-            //load css
-            load: 'static/css/site.css'
-        },
-            /*
-        {
             load: 'static/js/libs/cssfx.min.js'
         },
-            */
+        {
+            //load css
+            test: true,
+            load: ['static/css/site.css','static/css/media.css'],
+            callback: function (url) {
+                cssFx.insertCSS(cssFx.processCSS(cssFx.fetchCSS([url])));
+            }
+        },
+        {   //yepnope 1.1 is required for prefixes
+            load: 'ielt9!https://html5shiv.googlecode.com/svn/trunk/html5.js'
+        },
         {
             load:'//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.js',
             complete:function () {
@@ -79,16 +76,8 @@
                 }
             }
         },
-            /*
         {
-            load:'static/js/libs/jquery.css3finalize.min.js'
-        },
-            */
-        {
-            load:'static/js/plugins.js'
-        },
-        {
-            load:'static/js/script.js'
+            load: ['static/js/plugins.js','static/js/script.js']
         },
         {
             load:('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'

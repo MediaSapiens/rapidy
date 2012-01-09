@@ -62,24 +62,6 @@ table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
 
 
-/* ==|== primary styles =====================================================
-   Author: mediasapiens
-   ========================================================================== */
-
-/* flexbox */
-.fboxh,.fboxv{width: 100%;display: box;}
-.fboxh {
-    box-orient: horizontal;
-}
-.fboxv {
-    box-orient: vertical;
-}
-.fboxh >div{border: 1px #1e90ff dotted}
-.grid{box-flex:1}
-.grid2{box-flex:2}
-.grid3{box-flex:3}
-.grid4{box-flex:4}
-
 /* ==|== non-semantic helper classes ======================================== */
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
 .ir br { display: none; }
@@ -90,34 +72,3 @@ td { vertical-align: top; }
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
-
-
-/* ==|== media queries ====================================================== */
-
-@media only screen and (min-width: 480px) {
-
-
-}
-
-@media only screen and (min-width: 768px) {
-
-}
-
-
-
-/* ==|== print styles ======================================================= */
-
-@media print {
-    * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important; -ms-filter: none !important; }
-    a, a:visited { text-decoration: underline; }
-    a[href]:after { content: " (" attr(href) ")"; }
-    abbr[title]:after { content: " (" attr(title) ")"; }
-    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
-    pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-    thead { display: table-header-group; }
-    tr, img { page-break-inside: avoid; }
-    img { max-width: 100% !important; }
-    @page { margin: 0.5cm; }
-    p, h2, h3 { orphans: 3; widows: 3; }
-    h2, h3 { page-break-after: avoid; }
-}
